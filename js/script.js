@@ -13,5 +13,11 @@ function loginUser() {
     var usermail = document.getElementById("user-mail").value
     var password = document.getElementById("user-password").value
 
-    alert("Seu email é " + usermail + " e sua senha é " + password)
+    for(i = 0; i < objUsers.length; i++) {
+        if(usermail == objUsers[i].email && password == objUsers[i].password) {
+            console.log(usermail + " está logado!!!")
+        }
+        return
+    }
+    console.log("Email ou senha incorretos!!!")
 }
