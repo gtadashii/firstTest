@@ -16,8 +16,8 @@ function loginUser() {
     for(i = 0; i < objUsers.length; i++) {
         if(usermail == objUsers[i].email && password == objUsers[i].password) {
             console.log(usermail + " está logado!!!")
+            return
         }
-        return
     }
-    console.log("Email ou senha incorretos!!!")
+    alert("Email ou senha incorretos!!!")
 }
